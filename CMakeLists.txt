@@ -16,5 +16,9 @@ add_executable(MIME_OS src/main.cpp
         src/shell/Commands.cpp
         src/shell/Commands.cpp
         include/shell/Shell.hpp
-        src/shell/Shell.cpp)
+        src/shell/Shell.cpp
+        include/fileSystem/FSNode.hpp
+        include/fileSystem/Directory.hpp
+        include/fileSystem/File.hpp
+        src/kernel/filesystem/File.cpp)
 
