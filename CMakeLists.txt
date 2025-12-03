@@ -20,5 +20,6 @@ add_executable(MIME_OS src/main.cpp
         include/fileSystem/FSNode.hpp
         include/fileSystem/Directory.hpp
         include/fileSystem/File.hpp
-        src/kernel/filesystem/File.cpp)
+        src/kernel/filesystem/File.cpp
+        src/kernel/filesystem/Directory.cpp)
 

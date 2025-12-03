@@ -1,20 +1,32 @@
 
-#ifndef
-#include "../../include/fileSystem/FSNode.hpp"
+#ifndef DIRECTORY_HPP
+#define DIRECTORY_HPP
 
-class Directory;
-class File : public FSNode {
-protected:
-    std :: string content;
+#include <vector>
+#include <string>
+
+#include "FSNode.hpp"
+
+class Directory : public FSNode {
+
+    std :: vector <FSNode*> Children;
+
     public:
 
-    File(const std::string & Name, Directory* p = nullptr);
+    Directory(const std::string & Name, Directory *p);
 
-    std::string read()const;
-    void write(const std::string& data);
-    void append(const std::string& data);
-    void clear();
+    ~Directory();
 
-    bool isDirectory() const override{return false;} ;
+    FSNode* findChild(const std::string& name) const ;
+
+    bool removeChild(const std::string& name);
+    void addChild(FSNode * child);
+
+    std :: vector <std::string> listContents()const;
+
+
+    bool isDirectory() const override{return true;} ;
     int getSize() const override ;
 };
+
+#endif
