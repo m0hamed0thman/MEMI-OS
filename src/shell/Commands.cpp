@@ -2,6 +2,7 @@
 #include "../../include/kernel/logging/Logger.hpp"
 #include "../../include/shell/Commands.hpp"
 
+#include "../../include/fileSystem/FileSystem.hpp"
 #include <iostream>
 #include <algorithm>
 
@@ -10,30 +11,60 @@ std::string toLower(std::string str) {
     return str;
 }
 
-bool Commands::execute(const std::string &cmd, const std::vector<std::string> &args) {
+bool Commands::execute(const std::string &cmd, const std::vector<std::string> &args, FileSystem& fs) {
 
     std::string command = toLower(cmd);
 
-    if (command == "help") {
-        Logger::log(LogLevel::INFO, "Call Help");
-        cmdHelp();
-    }else if (command == "exit") {
-        Logger::log(LogLevel::INFO, " Call Exit");
+    if (command == "exit" || command == "quit") {
         return false;
-    }else if (command == "clear" || command == "cls") {
-        Logger::log(LogLevel::INFO, "Call Clear");
+    }
+    else if (command == "help") {
+        cmdHelp();
+    }
+    else if (command == "clear" || command == "cls") {
         cmdClear();
+    }
+    // === أوامر الملفات (الجديد) ===
+    else if (command == "ls" || command == "dir") {
+        // بننادي ls من الـ fs ونطبع النتيجة
+        std::cout << fs.ls();
+    }
+    else if (command == "pwd") {
+        std::cout << fs.pwd() << "\n";
+    }
+    else if (command == "mkdir") {
+        if (args.size() < 2) {
+            std::cout << "Usage: mkdir <directory_name>\n";
+        } else {
+            // args[1] هو اسم الفولدر
+            std::cout << fs.mkdir(args[1]) << "\n";
+        }
+    }
+    else if (command == "touch") {
+        if (args.size() < 2) {
+            std::cout << "Usage: touch <file_name>\n";
+        } else {
+            std::cout << fs.touch(args[1]) << "\n";
+        }
+    }
+    else if (command == "cd") {
+        if (args.size() < 2) {
+            std::cout << "Usage: cd <path>\n";
+        } else {
+            std::cout << fs.cd(args[1]) << "\n";
+        }
     }else if (command == "sum") {
-        Logger::log(LogLevel::INFO, "Call Sum");
         std :: string a = args[1];
         std :: string b = args[2];
         int x = stoi(a);
         int y = stoi(b);
         cmdSum(x,y);
     }
+
+
+
     else {
-        Logger::log(LogLevel::WARNING, "Call Unknown Command");
-        std::cerr << "Unknown command: " << command << std::endl;
+        std::cout << "Unknown command: " << cmd << "\n";
     }
 
     return true;
@@ -41,7 +72,6 @@ bool Commands::execute(const std::string &cmd, const std::vector<std::string> &a
 
 
 void Commands::cmdHelp() {
-    Logger::log(LogLevel::INFO, "Execute  Help Command");
     std::cout << "\n--- MIME-OS Available Commands ---\n";
     std::cout << "  help, ?      : Show this help menu\n";
     std::cout << "  clear, cls   : Clear the screen\n";
@@ -51,11 +81,9 @@ void Commands::cmdHelp() {
 }
 
 void Commands::cmdClear() {
-    Logger::log(LogLevel::INFO, "Clearing Screen");
     std::cout << "\033[2J\033[1;1H";
 }
 
 void Commands::cmdSum(const int a, const int b) {
-    Logger::log(LogLevel::INFO, "execute Sum");
     std :: cout << a << " + " << b << " = " << a + b << "\n";
 }

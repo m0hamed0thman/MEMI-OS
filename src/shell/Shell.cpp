@@ -11,6 +11,8 @@ void Shell::run() {
 
     std::string input;
     bool isRunning = true;
+    FileSystem fileSystem;
+    fileSystem.init();
 
     while (isRunning) {
         std :: cout << "MIME-OS: " ;
@@ -28,7 +30,7 @@ void Shell::run() {
             std::string cmd = args[0];
 
 
-            isRunning = Commands :: execute(cmd,args);
+            isRunning = Commands :: execute(cmd,args,fileSystem);
 
         }
 

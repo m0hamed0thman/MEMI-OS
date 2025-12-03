@@ -33,7 +33,6 @@ int main(int argc, char* argv[]) {
     Shell shell;
     shell.run();
     Logger::close();
-
     std::cout << "Press Enter to close window...";
     std::cin.get();
 

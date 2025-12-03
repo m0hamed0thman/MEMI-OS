@@ -3,14 +3,14 @@
 
 #include <string>
 #include <vector>
-
+#include "../fileSystem/FileSystem.hpp"
 class Commands {
 public:
 
 
     // if return true continue else exit the program
-    static bool execute(const std::string& cmd, const std::vector<std::string>& args);
-
+    // static bool execute(const std::string& cmd, const std::vector<std::string>& args);
+    static bool execute(const std::string& cmd, const std::vector<std::string>& args, FileSystem& fs);
 private:
 
     static void cmdHelp();
