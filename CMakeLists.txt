@@ -21,5 +21,7 @@ add_executable(MIME_OS src/main.cpp
         include/fileSystem/Directory.hpp
         include/fileSystem/File.hpp
         src/kernel/filesystem/File.cpp
-        src/kernel/filesystem/Directory.cpp)
+        src/kernel/filesystem/Directory.cpp
+        include/fileSystem/FileSystem.hpp
+        src/kernel/filesystem/FileSystem.cpp)
 
