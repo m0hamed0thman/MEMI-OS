@@ -1,68 +1,52 @@
-#include "/home/mohamed-othman/CLionProjects/MIME_OS/include/Process.hpp"
-#include <stdexcept>
+#include "/home/mohamed-othman/CLionProjects/MIME_OS/include/process/Process.hpp"
 
-int Process::globalCounter = 0;
 
-bool Process::check_name(const string& name) {
-    if (name == "null" || name.size() <4) {
+Process::Process(int id, std::string n, int instructionsCount)
+    : pid(id), name(n), totalInstructions(instructionsCount)
+{
+    state = ProcessState::READY;
+    programCounter = 0;
+}
+
+
+
+int Process::getPID() const { return pid; }
+std::string Process::getName() const { return name; }
+ProcessState Process::getState() const { return state; }
+int Process::getPC() const { return programCounter; }
+int Process::getTotalInstructions() const { return totalInstructions; }
+
+
+
+void Process::setState(ProcessState s) {
+    state = s;
+}
+
+
+
+bool Process::executeOneStep() {
+
+    if (state == ProcessState::TERMINATED) return false;
+
+
+    programCounter++;
+
+
+    if (programCounter >= totalInstructions) {
+        state = ProcessState::TERMINATED;
         return false;
     }
+
     return true;
 }
 
-string Process::statusToString() const {
-    switch(status) {
-        case Ready: return "Ready";
-        case Running: return "Running";
-        case Stopped: return "Stopped";
-        case Terminated: return "Terminated";
-    }
-    return "Unknown";
-}
-
-Process::Process(string name): PID(globalCounter++) {
-    if (check_name(name)) {
-        this->name = name;
-        this->status = Ready;
-    } else {
-        throw runtime_error("Error while creating process");
+std::string Process::stateToString() const {
+    switch (state) {
+        case ProcessState::READY:      return "READY";
+        case ProcessState::RUNNING:    return "RUNNING";
+        case ProcessState::BLOCKED:    return "BLOCKED";
+        case ProcessState::TERMINATED: return "TERMINATED";
+        default:                       return "UNKNOWN";
     }
 }
 
-bool Process::start() {
-    if (this->status == Terminated) {
-        return false;
-    }
-    this->status = Running;
-    return true;
-}
-
-bool Process::stop() {
-    if (this->status == Terminated) {
-        return false;
-    }
-    this->status = Stopped;
-    return true;
-}
-
-void Process::terminate() {
-    status = Terminated;
-}
-
-int Process::getPID() const {
-    return this->PID;
-}
-
-string Process::getName() const {
-    return this->name;
-}
-
-string Process::getStatus() const {
-    return statusToString();
-}
-
-void Process::display() const {
-    cout << "PID: " << this->PID << endl;
-    cout << "Name: " << this->name << endl;
-    cout << "Status: " << statusToString() << endl;
-}

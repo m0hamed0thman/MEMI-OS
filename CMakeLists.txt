@@ -5,9 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(MIME_OS src/main.cpp
         src/kernel/process/Process.cpp
-        include/Process.hpp
-        src/kernel/process/PCB.cpp
-        include/PCB.hpp
+        src/kernel/process/ProcessManager.cpp
         tests/test_process.cpp
         src/kernel/logging/Logger.cpp
         include/kernel/logging/Logger.hpp
@@ -23,5 +21,8 @@ add_executable(MIME_OS src/main.cpp
         src/kernel/filesystem/File.cpp
         src/kernel/filesystem/Directory.cpp
         include/fileSystem/FileSystem.hpp
-        src/kernel/filesystem/FileSystem.cpp)
+        src/kernel/filesystem/FileSystem.cpp
+        include/process/ProcessManager.hpp
+        include/process/ProcessManager.hpp
+        include/process/Process.hpp)
 
