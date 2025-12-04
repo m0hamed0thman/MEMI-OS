@@ -99,7 +99,7 @@ bool Commands::execute(const std::string &cmd, const std::vector<std::string> &a
 void Commands::cmdHelp() {
     std::cout << "\n================= MIME-OS v0.1 Help =================\n";
 
-    
+
     std::cout << "[System Commands]\n";
     std::cout << "  help, ?      : Show this help menu\n";
     std::cout << "  clear, cls   : Clear the screen\n";
