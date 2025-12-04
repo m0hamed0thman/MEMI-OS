@@ -96,6 +96,10 @@ bool Commands::execute(const std::string &cmd, const std::vector<std::string> &a
         }
     }
 
+    else if (command == "free" || command == "mem") {
+       std::cout << pm.getMemoryStatus() << "\n" ;
+    }
+
     else {
         std::cout << "Unknown command: " << cmd << "\n";
     }
@@ -127,6 +131,11 @@ void Commands::cmdHelp() {
     std::cout << "  ps           : List all active processes\n";
     std::cout << "  exec <name>  : Run a new program (create process)\n";
     std::cout << "  kill <pid>   : Terminate a process by its ID\n";
+
+
+    std::cout << "\n[Memory Management]\n";
+    std::cout << "  free, mem            : Show memory usage statistics (Used/Free)\n";
+
 
     std::cout << "=====================================================\n";
 }

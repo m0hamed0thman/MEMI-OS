@@ -6,11 +6,14 @@
 #include <map>
 #include <string>
 
+
+#include "../../include/memory/MemoryManager.hpp"
+
 class ProcessManager {
 private:
 
     std::vector<Process*> processTable;
-
+    MemoryManager memoryManager;
     int nextPID;
 
 public:
@@ -30,6 +33,10 @@ public:
 
 
     std::string listProcesses() const;
+
+    std::string getMemoryStatus() const {
+        return memoryManager.getStatus();
+    }
 
 };
 

@@ -1,6 +1,6 @@
 #include "../../../include/process/ProcessManager.hpp"
 
-
+#include <iostream>
 
 ProcessManager::ProcessManager() {
 
@@ -17,6 +17,15 @@ ProcessManager::~ProcessManager() {
 
 int ProcessManager::createProcess(const std::string &name) {
 
+
+    int processSize = 64;
+    int address = memoryManager.allocate(processSize,nextPID);
+
+    if (address==-1) {
+        std::cerr << "Error: Not enough memory to create process '" << name << "'\n";
+        return -1;
+    }
+
     Process* newProcess = new Process(nextPID, name,10);
 
     nextPID++;
@@ -31,6 +40,7 @@ bool ProcessManager::killProcess(int pid) {
     for (auto it = processTable.begin(); it != processTable.end(); it++) {
         if ((*it)->getPID() == pid) {
 
+            memoryManager.deallocate(pid);
             delete (*it);
 
             processTable.erase(it);
