@@ -15,7 +15,8 @@ public:
     FileSystem();
     ~FileSystem();
 
-    void init();
+    // Initialization
+    // void init();
 
 
     std::string ls() const;

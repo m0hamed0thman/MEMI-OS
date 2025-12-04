@@ -13,15 +13,21 @@ SOURCES = $(PROJECT_DIR)/src/main.cpp \
           $(PROJECT_DIR)/src/shell/Commands.cpp \
           $(PROJECT_DIR)/src/kernel/filesystem/File.cpp \
           $(PROJECT_DIR)/src/kernel/filesystem/Directory.cpp \
-          $(PROJECT_DIR)/src/kernel/filesystem/FileSystem.cpp
+          $(PROJECT_DIR)/src/kernel/filesystem/FileSystem.cpp \
+          $(PROJECT_DIR)/src/kernel/process/ProcessManager.cpp \
+          $(PROJECT_DIR)/src/kernel/process/Process.cpp \
 
 # 3. اسم البرنامج النهائي
 OUTPUT = mime-os
 
 # 4. أمر البناء
-buildshell:
+build:
 	$(CXX) $(SOURCES) -o $(OUTPUT)
 
 # 5. أمر التنظيف (اختياري)
 clean:
 	rm -f $(OUTPUT)
+
+
+run:
+	./ $(OUTPUT)

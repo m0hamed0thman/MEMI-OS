@@ -3,7 +3,9 @@
 #include "../../../include/fileSystem/FileSystem.hpp"
 #include "../../../include/kernel/logging/Logger.hpp"
 
-FileSystem::FileSystem():root(nullptr),currentDirectory(nullptr) {
+FileSystem::FileSystem(){
+    root = new Directory("root",nullptr);
+    currentDirectory = root;
 
 }
 
@@ -13,10 +15,10 @@ FileSystem::~FileSystem() {
     }
 }
 
-void FileSystem::init() {
-    root = new Directory("root",nullptr);
-    currentDirectory = root;
-}
+// void FileSystem::init() {
+//     root = new Directory("root",nullptr);
+//     currentDirectory = root;
+// }
 
 std::string FileSystem::ls() const {
     std::string result;
