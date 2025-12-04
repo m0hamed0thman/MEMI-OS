@@ -16,6 +16,7 @@ SOURCES = $(PROJECT_DIR)/src/main.cpp \
           $(PROJECT_DIR)/src/kernel/filesystem/FileSystem.cpp \
           $(PROJECT_DIR)/src/kernel/process/ProcessManager.cpp \
           $(PROJECT_DIR)/src/kernel/process/Process.cpp \
+          $(PROJECT_DIR)/src/kernel/process/Scheduler.cpp \
 
 # 3. اسم البرنامج النهائي
 OUTPUT = mime-os

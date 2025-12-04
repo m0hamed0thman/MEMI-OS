@@ -17,7 +17,7 @@ ProcessManager::~ProcessManager() {
 
 int ProcessManager::createProcess(const std::string &name) {
 
-    Process* newProcess = new Process(nextPID, name);
+    Process* newProcess = new Process(nextPID, name,10);
 
     nextPID++;
 

@@ -6,12 +6,14 @@
 #include <iostream>
 #include <algorithm>
 
+#include "../../include/process/Scheduler.hpp"
+
 std::string toLower(std::string str) {
     std::transform(str.begin(), str.end(), str.begin(), ::tolower);
     return str;
 }
 
-bool Commands::execute(const std::string &cmd, const std::vector<std::string> &args, FileSystem& fs, ProcessManager& pm) {
+bool Commands::execute(const std::string &cmd, const std::vector<std::string> &args, FileSystem& fs, ProcessManager& pm, Scheduler& scheduler) {
 
     std::string command = toLower(cmd);
 
@@ -65,8 +67,14 @@ bool Commands::execute(const std::string &cmd, const std::vector<std::string> &a
         } else {
 
             int pid = pm.createProcess(args[1]);
-            std::cout << "Process created with PID: " << pid << "\n";
-            Logger::log(LogLevel::INFO, "Process created: " + args[1]);
+
+
+            Process* newProc = pm.getProcess(pid);
+
+
+            scheduler.addProcess(newProc);
+
+            std::cout << "Process created and scheduled (PID: " << pid << ")\n";
         }
     }
     else if (command == "kill") {

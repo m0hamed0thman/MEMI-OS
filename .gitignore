@@ -1,4 +1,5 @@
 *.idea
 
-*.exemime-os
+*mime-os
 *.log
+system.log
