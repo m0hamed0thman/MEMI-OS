@@ -26,6 +26,7 @@ set(OS_SOURCES
 add_executable(MIME_OS
         src/main.cpp
         ${OS_SOURCES}
+        include/hardware/CPU.hpp
 )
 
 
@@ -37,3 +38,11 @@ add_executable(TestRAM
 )
 
 add_test(NAME RAM_Test COMMAND TestRAM)
+
+add_executable(TestCPU
+        tests/hardware/test_CPU.cpp
+        src/hardware/CPU.cpp
+        src/hardware/RAM.cpp
+        src/kernel/logging/Logger.cpp
+)
+add_test(NAME CPU_Test COMMAND TestCPU)
