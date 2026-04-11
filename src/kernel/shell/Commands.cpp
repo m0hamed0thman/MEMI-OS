@@ -7,13 +7,14 @@
 
 
 
-#include "../../include/kernel/logging/Logger.hpp"
-#include "../../include/shell/Commands.hpp"
-#include "../../include/fileSystem/FileSystem.hpp"
+#include "../include/kernel/logging/Logger.hpp"
+#include "../include/kernel/shell/Commands.hpp"
+#include "../include/fileSystem/FileSystem.hpp"
 #include <iostream>
 #include <algorithm>
-#include "../../include/process/Scheduler.hpp"
-#include "../../include/utils/StringUtils.hpp"
+#include "../include/kernel/process/Scheduler.hpp"
+#include "../include/utils/StringUtils.hpp"
+#include "../include/kernel/process/ProcessManager.hpp"
 
 std::string toLower(std::string str) {
     std::transform(str.begin(), str.end(), str.begin(), ::tolower);

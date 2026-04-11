@@ -7,10 +7,10 @@
 
 
 
-#include "../../include/shell/Shell.hpp"
-#include "../../include/shell/Commands.hpp"
-#include "../../include/utils/StringUtils.hpp"
-#include "../../include/kernel/logging/Logger.hpp"
+#include "../include/kernel/shell/Shell.hpp"
+#include "../include/kernel/shell/Commands.hpp"
+#include "../include/utils/StringUtils.hpp"
+#include "../include/kernel/logging/Logger.hpp"
 #include <iostream>
 #include <thread>
 #include <atomic>

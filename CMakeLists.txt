@@ -6,43 +6,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(include)
 
-
-set(OS_SOURCES
-        src/kernel/process/Process.cpp
-        src/kernel/process/ProcessManager.cpp
-        src/kernel/process/Scheduler.cpp
-        src/kernel/memory/MemoryManager.cpp
-        src/kernel/logging/Logger.cpp
-        src/kernel/filesystem/File.cpp
-        src/kernel/filesystem/Directory.cpp
-        src/kernel/filesystem/FileSystem.cpp
-        src/utils/StringUtils.cpp
-        src/shell/Commands.cpp
-        src/shell/Shell.cpp
-        src/hardware/RAM.cpp
+# استخدام file(GLOB) عشان CMake يجمع الملفات بناءً على علامة النجمة
+file(GLOB OS_SOURCES
+        "src/kernel/process/*.cpp"
+        "src/filesystem/*.cpp"
+        "src/utils/*.cpp"
+        "src/kernel/shell/*.cpp"
+        "src/hardware/*.cpp"
+        "src/kernel/logging/*.cpp"
+        "src/kernel/memory/*.cpp"
 )
-
 
 add_executable(MIME_OS
         src/main.cpp
         ${OS_SOURCES}
-        include/hardware/CPU.hpp
 )
-
-
-enable_testing()
-
-add_executable(TestRAM
-        tests/hardware/test_RAM.cpp
-        ${OS_SOURCES}
-)
-
-add_test(NAME RAM_Test COMMAND TestRAM)
-
-add_executable(TestCPU
-        tests/hardware/test_CPU.cpp
-        src/hardware/CPU.cpp
-        src/hardware/RAM.cpp
-        src/kernel/logging/Logger.cpp
-)
-add_test(NAME CPU_Test COMMAND TestCPU)

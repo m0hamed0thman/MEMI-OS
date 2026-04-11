@@ -1,4 +1,4 @@
-#include "../../../include/process/ProcessManager.hpp"
+#include "../include/kernel/process/ProcessManager.hpp"
 
 #include <iostream>
 

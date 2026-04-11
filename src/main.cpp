@@ -1,5 +1,5 @@
 #include "../include/kernel/logging/Logger.hpp"
-#include "../include/shell/Shell.hpp"
+#include "../include/kernel/shell/Shell.hpp"
 #include <string>
 #include <iostream>
 #include <cstdlib> // عشان دالة system

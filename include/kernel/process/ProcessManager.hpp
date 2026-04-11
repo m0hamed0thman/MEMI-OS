@@ -7,7 +7,7 @@
 #include <string>
 
 
-#include "../../include/memory/MemoryManager.hpp"
+#include "../../kernel/memory/MemoryManager.hpp"
 
 class ProcessManager {
 private:

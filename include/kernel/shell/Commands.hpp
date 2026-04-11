@@ -11,8 +11,8 @@
 #define COMMANDS_HPP
 #include <string>
 #include <vector>
-#include "../fileSystem/FileSystem.hpp"
-#include "../../include/process/ProcessManager.hpp"
+#include "../include/fileSystem/FileSystem.hpp"
+#include "../include/kernel/process/ProcessManager.hpp"
 
 class Scheduler;
 class Commands {

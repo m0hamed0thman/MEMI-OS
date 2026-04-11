@@ -1,4 +1,4 @@
-#include "/home/mohamed-othman/CLionProjects/MIME_OS/include/process/Process.hpp"
+#include "../include/kernel/process/Process.hpp"
 
 
 Process::Process(int id, std::string n, int instructionsCount)

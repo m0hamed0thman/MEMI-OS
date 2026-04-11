@@ -1,6 +1,6 @@
 
 
-#include "../../../include/process/Scheduler.hpp"
+#include "../include/kernel/process/Scheduler.hpp"
 
 Scheduler::Scheduler() {
     currentProcess = nullptr;

@@ -7,7 +7,7 @@
 
 
 
-#include "../../../include/fileSystem/Directory.hpp"
+#include "../../include/fileSystem/Directory.hpp"
 
 
 Directory::Directory(const std::string &Name, Directory *p):FSNode(Name,p) {
