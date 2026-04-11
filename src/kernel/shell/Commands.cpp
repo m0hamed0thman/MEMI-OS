@@ -216,7 +216,7 @@ void Commands::cmdExec(const std::vector<std::string>& args, ProcessManager& pm,
     Process* newProc = pm.getProcess(pid);
     sch.addProcess(newProc);
     std::cout << "Process created and scheduled (PID: " << pid << ")\n";
-    Logger::log(LogLevel::INFO, "Executed program: " + args[1]);
+    Logger::getInstance().log(LogLevel::INFO, "Executed program: " + args[1]);
 }
 
 
@@ -229,7 +229,7 @@ void Commands::cmdKill(const std::vector<std::string>& args, ProcessManager& pm)
         int pid = std::stoi(args[1]);
         if (pm.killProcess(pid)) {
             std::cout << "Process " << pid << " killed successfully.\n";
-            Logger::log(LogLevel::INFO, "Killed process PID: " + std::to_string(pid));
+            Logger::getInstance().log(LogLevel::INFO, "Killed process PID: " + std::to_string(pid));
         } else {
             std::cout << "Error: Process " << pid << " not found.\n";
         }

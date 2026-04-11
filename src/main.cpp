@@ -27,12 +27,11 @@ int main(int argc, char* argv[]) {
 
         return 0;
     }
-    Logger::init("data/logs/system.log");
-    Logger::log(LogLevel::INFO, "System Booted Successfully in New Window.");
-
+    Logger::getInstance().init("/home/o_o/CLionProjects/MEMI-OS/data/logs/system.log");
+    Logger::getInstance().log(LogLevel::INFO, "System Booted Successfully");
     Shell shell;
     shell.run();
-    Logger::close();
+    Logger::getInstance().close();
     std::cout << "Press Enter to close window...";
     std::cin.get();
 

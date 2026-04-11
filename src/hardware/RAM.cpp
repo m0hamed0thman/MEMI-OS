@@ -14,14 +14,14 @@
 
 
 RAM::RAM(size_t size) {
-    Logger::log(LogLevel::INFO,"[Hardware] RAM initialized.");
+    Logger::getInstance().log(LogLevel::INFO,"[Hardware] RAM initialized.");
     memory.resize(size);
 }
 
 
 Byte RAM::read(Address addr) const {
     if (addr >= memory.size()) {
-        Logger::log(LogLevel::ERROR,"[Hardware Error] Segmentation Fault: Read at address.");
+        Logger::getInstance().log(LogLevel::ERROR,"[Hardware Error] Segmentation Fault: Read at address.");
         return 0;
     }
     return memory[addr];
@@ -30,7 +30,7 @@ Byte RAM::read(Address addr) const {
 
 void RAM::write(Address addr, Byte val) {
     if (addr >= memory.size()) {
-        Logger::log(LogLevel::ERROR,"[Hardware Error] Segmentation Fault: Write at address.");
+        Logger::getInstance().log(LogLevel::ERROR,"[Hardware Error] Segmentation Fault: Write at address.");
         return;
     }
     memory[addr] = val;
@@ -39,7 +39,7 @@ void RAM::write(Address addr, Byte val) {
 
 void RAM::loadProgram(Address addr, std::vector<Byte> data) {
     if (addr + data.size() > memory.size()) {
-        Logger::log(LogLevel::ERROR,"Not enough memory to Load Program");
+        Logger::getInstance().log(LogLevel::ERROR,"Not enough memory to Load Program");
         return;
     }
     for (size_t i = 0; i < data.size(); ++i) {

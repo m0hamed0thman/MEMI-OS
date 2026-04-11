@@ -14,19 +14,31 @@ enum class LogLevel {
 };
 
 class Logger {
+private:
+
+    std::ofstream logFile;
+    std::mutex logMutex;
+    bool isInitialized;
 
 
-    static std :: ofstream logFile;
-    static std :: mutex logMutex;
-    static bool isInitialized;
+    Logger() {
+        isInitialized = false;
+    }
 
-    public:
+public:
 
-    static void init(const std :: string& filePath);
+    Logger(const Logger&) = delete;
+    Logger& operator=(const Logger&) = delete;
 
-    static void log(LogLevel level, const std :: string& msg);
 
-    static void close();
+    static Logger& getInstance() {
+        static Logger instance;
+        return instance;
+    }
+
+    void init(const std::string& filePath);
+    void log(LogLevel level, const std::string& msg);
+    void close();
 };
 
 #endif

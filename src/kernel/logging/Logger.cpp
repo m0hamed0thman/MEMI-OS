@@ -4,30 +4,33 @@
 #include <ctime>
 #include <iomanip>
 
-std::ofstream Logger::logFile;
-std::mutex Logger::logMutex;
-bool Logger::isInitialized = false;
+std::ofstream logFile;
+std::mutex logMutex;
+
+void Logger::close() {
+    std::lock_guard<std::mutex> lock(logMutex);
+    if (isInitialized && logFile.is_open()) {
+        logFile << "[SYSTEM] === System Logger Closed ===" << std::endl;
+        logFile.close();
+        isInitialized = false;
+    }
+}
+
 
 void Logger::init(const std::string& filePath) {
+    std::lock_guard<std::mutex> lock(logMutex);
+
+    if (isInitialized) return;
 
     logFile.open(filePath, std::ios::app);
 
     if (logFile.is_open()) {
         isInitialized = true;
-        log(LogLevel::INFO, "=== MIME-OS System Logger Initialized ===");
+        logFile << "[SYSTEM] === MIME-OS System Logger Initialized ===" << std::endl;
     } else {
         std::cerr << "[CRITICAL ERROR] Failed to open log file at: " << filePath << std::endl;
     }
 }
-
-void Logger::close() {
-    if (logFile.is_open()) {
-        log(LogLevel::INFO, "=== System Logger Closed ===");
-        logFile.close();
-    }
-    isInitialized = false;
-}
-
 void Logger::log(LogLevel level, const std::string& msg) {
     std::lock_guard<std::mutex> lock(logMutex);
 
@@ -58,14 +61,6 @@ void Logger::log(LogLevel level, const std::string& msg) {
     auto now = std::chrono::system_clock::now();
     auto time = std::chrono::system_clock::to_time_t(now);
 
-    // cancel print in logs in the terminal
-
-    // std::cout << colorCode
-    //           << "[" << std::put_time(std::localtime(&time), "%Y-%m-%d %H:%M:%S") << "] "
-    //           << "[" << levelStr << "] "
-    //           << msg
-    //           << resetColor << std::endl;
-    //
 
     if (isInitialized && logFile.is_open()) {
         logFile << "[" << std::put_time(std::localtime(&time), "%Y-%m-%d %H:%M:%S") << "] "

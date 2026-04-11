@@ -17,7 +17,7 @@
 #include <chrono>
 
 void Shell::run() {
-    Logger::log(LogLevel::INFO, "Shell session started interactively.");
+    Logger::getInstance().log(LogLevel::INFO, "Shell session started interactively.");
     std::cout << "Welcome to MIME-OS v0.1" << std::endl;
     std::cout << "Type 'help' to see available commands." << std::endl;
 
@@ -40,6 +40,6 @@ void Shell::run() {
         }
     }
     fileSystem.saveState();
-    Logger::log(LogLevel::INFO, "Shell session ended.");
+    Logger::getInstance().log(LogLevel::INFO, "Shell session ended.");
 }
 
