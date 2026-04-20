@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 
         return 0;
     }
-    Logger::getInstance().init("/home/o_o/CLionProjects/MEMI-OS/data/logs/system.log");
+    Logger::getInstance().init("../data/logs/system.log");
     Logger::getInstance().log(LogLevel::INFO, "System Booted Successfully");
     Shell shell;
     shell.run();

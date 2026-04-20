@@ -4,8 +4,7 @@
 #include <ctime>
 #include <iomanip>
 
-std::ofstream logFile;
-std::mutex logMutex;
+
 
 void Logger::close() {
     std::lock_guard<std::mutex> lock(logMutex);
