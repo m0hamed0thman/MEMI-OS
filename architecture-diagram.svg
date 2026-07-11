@@ -1,0 +1,52 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="Courier New, monospace">
+  <rect width="900" height="620" fill="#0d1117"/>
+
+  <!-- Shell layer -->
+  <rect x="250" y="30" width="400" height="70" rx="10" fill="#1f2b3d" stroke="#58a6ff" stroke-width="2"/>
+  <text x="450" y="60" text-anchor="middle" font-size="18" fill="#f0f6fc" font-weight="bold">🖥️ Shell (REPL)</text>
+  <text x="450" y="82" text-anchor="middle" font-size="13" fill="#8b949e">command parsing + dispatch</text>
+
+  <!-- connector -->
+  <line x1="450" y1="100" x2="450" y2="130" stroke="#30363d" stroke-width="2"/>
+  <polygon points="450,138 444,126 456,126" fill="#30363d"/>
+
+  <!-- middle row: three subsystems -->
+  <rect x="60" y="140" width="230" height="110" rx="10" fill="#1a2b1e" stroke="#39d353" stroke-width="2"/>
+  <text x="175" y="170" text-anchor="middle" font-size="16" fill="#f0f6fc" font-weight="bold">📁 Filesystem</text>
+  <text x="175" y="192" text-anchor="middle" font-size="12" fill="#8b949e">Directory / File / FSNode</text>
+  <text x="175" y="212" text-anchor="middle" font-size="12" fill="#8b949e">save/restore state</text>
+
+  <rect x="335" y="140" width="230" height="110" rx="10" fill="#2a1f3d" stroke="#bc8cff" stroke-width="2"/>
+  <text x="450" y="170" text-anchor="middle" font-size="16" fill="#f0f6fc" font-weight="bold">⚙️ Process Layer</text>
+  <text x="450" y="192" text-anchor="middle" font-size="12" fill="#8b949e">Process / ProcessManager</text>
+  <text x="450" y="212" text-anchor="middle" font-size="12" fill="#8b949e">Scheduler (round-robin)</text>
+
+  <rect x="610" y="140" width="230" height="110" rx="10" fill="#3d2a1f" stroke="#ffa657" stroke-width="2"/>
+  <text x="725" y="170" text-anchor="middle" font-size="16" fill="#f0f6fc" font-weight="bold">🧮 Memory Layer</text>
+  <text x="725" y="192" text-anchor="middle" font-size="12" fill="#8b949e">MemoryManager / Block</text>
+  <text x="725" y="212" text-anchor="middle" font-size="12" fill="#8b949e">first-fit + coalescing</text>
+
+  <!-- connectors down to hardware -->
+  <line x1="175" y1="250" x2="175" y2="290" stroke="#30363d" stroke-width="2"/>
+  <line x1="450" y1="250" x2="450" y2="290" stroke="#30363d" stroke-width="2"/>
+  <line x1="725" y1="250" x2="725" y2="290" stroke="#30363d" stroke-width="2"/>
+  <line x1="175" y1="290" x2="725" y2="290" stroke="#30363d" stroke-width="2"/>
+  <polygon points="450,298 444,286 456,286" fill="#30363d"/>
+
+  <!-- Hardware layer -->
+  <rect x="120" y="300" width="660" height="130" rx="10" fill="#1f242b" stroke="#f0883e" stroke-width="2"/>
+  <text x="450" y="330" text-anchor="middle" font-size="18" fill="#f0f6fc" font-weight="bold">🔧 Hardware Layer</text>
+  <text x="450" y="354" text-anchor="middle" font-size="13" fill="#8b949e">CPU emulator (fetch/decode/execute)  ·  RAM (vector&lt;Byte&gt;)</text>
+  <text x="450" y="376" text-anchor="middle" font-size="13" fill="#484f58">MMU · Paging · Timer · InterruptController · Disk — stubbed (planned)</text>
+  <rect x="150" y="392" width="600" height="26" rx="6" fill="none" stroke="#484f58" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="450" y="409" text-anchor="middle" font-size="12" fill="#6e7681">not yet implemented</text>
+
+  <!-- Logger, off to the side, connects to everything -->
+  <rect x="330" y="460" width="240" height="70" rx="10" fill="#26232f" stroke="#d2a8ff" stroke-width="2" stroke-dasharray="0"/>
+  <text x="450" y="490" text-anchor="middle" font-size="15" fill="#f0f6fc" font-weight="bold">📝 Logger</text>
+  <text x="450" y="510" text-anchor="middle" font-size="12" fill="#8b949e">thread-safe, writes to system.log</text>
+
+  <line x1="450" y1="430" x2="450" y2="460" stroke="#30363d" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <text x="450" y="580" text-anchor="middle" font-size="12" fill="#6e7681">Logger is used by every layer above (dashed = cross-cutting)</text>
+</svg>

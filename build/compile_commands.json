@@ -1,0 +1,146 @@
+[
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/main.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/main.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/main.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/filesystem/Directory.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/filesystem/Directory.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/filesystem/Directory.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/filesystem/Directory.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/filesystem/File.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/filesystem/File.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/filesystem/File.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/filesystem/File.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/filesystem/FileSystem.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/filesystem/FileSystem.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/filesystem/FileSystem.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/filesystem/FileSystem.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/filesystem/Permission.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/filesystem/Permission.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/filesystem/Permission.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/filesystem/Permission.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/hardware/CPU.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/hardware/CPU.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/hardware/CPU.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/hardware/CPU.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/hardware/Disk.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/hardware/Disk.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/hardware/Disk.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/hardware/Disk.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/hardware/InterruptController.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/hardware/InterruptController.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/hardware/InterruptController.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/hardware/InterruptController.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/hardware/MMU.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/hardware/MMU.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/hardware/MMU.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/hardware/MMU.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/hardware/RAM.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/hardware/RAM.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/hardware/RAM.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/hardware/RAM.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/hardware/Timer.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/hardware/Timer.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/hardware/Timer.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/hardware/Timer.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/logging/Logger.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/logging/Logger.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/logging/Logger.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/logging/Logger.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/memory/Block.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/memory/Block.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/memory/Block.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/memory/Block.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/memory/MemoryManager.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/memory/MemoryManager.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/memory/MemoryManager.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/memory/MemoryManager.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/memory/Paging.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/memory/Paging.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/memory/Paging.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/memory/Paging.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/process/Process.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/process/Process.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/process/Process.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/process/Process.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/process/ProcessManager.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/process/ProcessManager.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/process/ProcessManager.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/process/ProcessManager.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/process/Scheduler.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/process/Scheduler.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/process/Scheduler.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/process/Scheduler.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/shell/Commands.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/shell/Commands.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/shell/Commands.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/shell/Commands.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/shell/Paser.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/shell/Paser.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/shell/Paser.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/shell/Paser.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/kernel/shell/Shell.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/kernel/shell/Shell.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/kernel/shell/Shell.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/kernel/shell/Shell.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/utils/Helper.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/utils/Helper.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/utils/Helper.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/utils/Helper.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/utils/StringUtils.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/utils/StringUtils.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/utils/StringUtils.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/utils/StringUtils.cpp.o"
+},
+{
+  "directory": "/home/o_o/Desktop/MEMI-OS/build",
+  "command": "/usr/bin/c++  -I/home/o_o/Desktop/MEMI-OS/include -g -std=gnu++20 -o CMakeFiles/MIME_OS.dir/src/utils/TimeUtils.cpp.o -c /home/o_o/Desktop/MEMI-OS/src/utils/TimeUtils.cpp",
+  "file": "/home/o_o/Desktop/MEMI-OS/src/utils/TimeUtils.cpp",
+  "output": "CMakeFiles/MIME_OS.dir/src/utils/TimeUtils.cpp.o"
+}
+]

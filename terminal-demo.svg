@@ -1,0 +1,34 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Courier New, monospace">
+  <rect width="900" height="480" rx="12" fill="#010409"/>
+  <rect x="0" y="0" width="900" height="36" rx="12" fill="#161b22"/>
+  <rect y="12" width="900" height="24" fill="#161b22"/>
+  <circle cx="26" cy="18" r="7" fill="#ff5f56"/>
+  <circle cx="50" cy="18" r="7" fill="#ffbd2e"/>
+  <circle cx="74" cy="18" r="7" fill="#27c93f"/>
+  <text x="450" y="23" text-anchor="middle" font-size="13" fill="#8b949e">example session — MIME_OS</text>
+
+  <g font-size="15">
+    <text x="24" y="68"><tspan fill="#39d353">memi-os&gt; </tspan><tspan fill="#c9d1d9">mkdir projects</tspan></text>
+    <text x="24" y="94"><tspan fill="#39d353">memi-os&gt; </tspan><tspan fill="#c9d1d9">cd projects</tspan></text>
+    <text x="24" y="120"><tspan fill="#39d353">memi-os&gt; </tspan><tspan fill="#c9d1d9">touch notes.txt</tspan></text>
+    <text x="24" y="146"><tspan fill="#39d353">memi-os&gt; </tspan><tspan fill="#c9d1d9">write notes.txt "hello from MEMI-OS"</tspan></text>
+
+    <text x="24" y="180"><tspan fill="#39d353">memi-os&gt; </tspan><tspan fill="#c9d1d9">exec worker</tspan></text>
+    <text x="24" y="204" fill="#8b949e">Process 100 (worker) created and scheduled.</text>
+
+    <text x="24" y="236"><tspan fill="#39d353">memi-os&gt; </tspan><tspan fill="#c9d1d9">ps</tspan></text>
+    <text x="24" y="260" fill="#8b949e">PID   NAME     STATE</text>
+    <text x="24" y="282" fill="#8b949e">100   worker   RUNNING</text>
+
+    <text x="24" y="314"><tspan fill="#39d353">memi-os&gt; </tspan><tspan fill="#c9d1d9">free</tspan></text>
+    <text x="24" y="338" fill="#8b949e">Total: 1024 | Used: 64 | Free: 960</text>
+
+    <text x="24" y="370"><tspan fill="#39d353">memi-os&gt; </tspan><tspan fill="#c9d1d9">exit</tspan></text>
+    <text x="24" y="394" fill="#8b949e">Saving filesystem state... done.</text>
+    <text x="24" y="416" fill="#8b949e">Goodbye.</text>
+
+    <rect x="24" y="428" width="10" height="18" fill="#39d353">
+      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

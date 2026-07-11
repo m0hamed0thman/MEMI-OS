@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#39d353"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="260" rx="14" fill="url(#bg)"/>
+
+  <!-- faint background code lines -->
+  <g fill="none" stroke="#2b3138" stroke-width="2">
+    <line x1="40" y1="40" x2="260" y2="40"/>
+    <line x1="40" y1="60" x2="200" y2="60"/>
+    <line x1="40" y1="80" x2="300" y2="80"/>
+    <line x1="940" y1="180" x2="1160" y2="180"/>
+    <line x1="960" y1="200" x2="1120" y2="200"/>
+    <line x1="940" y1="220" x2="1160" y2="220"/>
+  </g>
+
+  <!-- terminal window chrome -->
+  <rect x="40" y="34" width="1120" height="192" rx="10" fill="#010409" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="40" y="34" width="1120" height="30" rx="10" fill="#161b22"/>
+  <circle cx="62" cy="49" r="6" fill="#ff5f56"/>
+  <circle cx="82" cy="49" r="6" fill="#ffbd2e"/>
+  <circle cx="102" cy="49" r="6" fill="#27c93f"/>
+  <text x="600" y="53" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#8b949e">memi-os — user-space shell</text>
+
+  <!-- prompt line -->
+  <text x="66" y="100" font-family="Courier New, monospace" font-size="18" fill="#39d353">$ ./MIME_OS</text>
+
+  <!-- title -->
+  <text x="66" y="160" font-family="Courier New, monospace" font-size="56" font-weight="bold" fill="#f0f6fc">MEMI-OS</text>
+
+  <!-- accent underline -->
+  <rect x="66" y="172" width="360" height="4" fill="url(#accent)"/>
+
+  <!-- subtitle -->
+  <text x="66" y="204" font-family="Courier New, monospace" font-size="18" fill="#8b949e">A user-space operating system simulator, built in C++20</text>
+</svg>

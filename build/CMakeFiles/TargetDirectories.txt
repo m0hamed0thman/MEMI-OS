@@ -1,0 +1,3 @@
+/home/o_o/Desktop/MEMI-OS/build/CMakeFiles/MIME_OS.dir
+/home/o_o/Desktop/MEMI-OS/build/CMakeFiles/edit_cache.dir
+/home/o_o/Desktop/MEMI-OS/build/CMakeFiles/rebuild_cache.dir
