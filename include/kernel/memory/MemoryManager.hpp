@@ -8,7 +8,7 @@
 class MemoryManager {
 private:
     std::vector<Block> memoryMap;
-    int totalMemory;
+    int totalMemory = 1024; // Default total memory size in bytes
 
 public:
     MemoryManager(int size = 1024);

@@ -7,6 +7,7 @@ MemoryManager::MemoryManager(int size) {
     memoryMap.push_back(GigBlock);
 }
 
+
 int MemoryManager::allocate(int size, int pid) {
 
     for (auto it = memoryMap.begin(); it != memoryMap.end(); ++it) {
