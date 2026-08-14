@@ -24,7 +24,7 @@ private:
     // === System Commands ===
     static void cmdHelp();
     static void cmdClear();
-    static void cmdExit();
+    static void cmdExit(FileSystem& fs);
 
     // === File System Commands ===
     static void cmdLs(FileSystem& fs);

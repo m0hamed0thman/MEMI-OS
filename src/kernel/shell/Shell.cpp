@@ -39,7 +39,5 @@ void Shell::run() {
             isRunning = Commands :: execute(cmd,args,fileSystem,pm,scheduler);
         }
     }
-    fileSystem.saveState();
-    Logger::getInstance().log(LogLevel::INFO, "Shell session ended.");
 }
 

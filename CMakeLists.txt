@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(include)
 
-# استخدام file(GLOB) عشان CMake يجمع الملفات بناءً على علامة النجمة
 file(GLOB OS_SOURCES
         "src/kernel/process/*.cpp"
         "src/filesystem/*.cpp"

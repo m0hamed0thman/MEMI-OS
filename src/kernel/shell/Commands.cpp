@@ -28,7 +28,10 @@ bool Commands::execute(const std::string &cmd, const std::vector<std::string> &a
     std::string command = toLower(cmd);
 
     // 1. System Commands
-    if (command == "exit" || command == "quit") return false;
+    if (command == "exit" || command == "quit"){
+        cmdExit(fs);
+        return false;
+    }
     else if (command == "help")      cmdHelp();
     else if (command == "clear")     cmdClear();
 
@@ -58,6 +61,13 @@ bool Commands::execute(const std::string &cmd, const std::vector<std::string> &a
     else std::cout << "Unknown command: " << cmd << "\n";
 
     return true;
+}
+
+
+void Commands::cmdExit(FileSystem& fs) {
+    Logger::getInstance().log(LogLevel::INFO, "User initiated system shutdown.");
+    fs.saveState();
+    std::cout << "Exiting MIME-OS. Goodbye!\n";
 }
 
 

@@ -3,6 +3,7 @@
 
 
 MemoryManager::MemoryManager(int size) {
+    totalMemory = size;
     Block GigBlock = Block(0, size);
     memoryMap.push_back(GigBlock);
 }
