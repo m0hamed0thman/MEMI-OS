@@ -7,17 +7,18 @@
 
 
 
-#include "../include/kernel/logging/Logger.hpp"
-#include "../include/kernel/shell/Commands.hpp"
-#include "../include/fileSystem/FileSystem.hpp"
+#include "kernel/logging/Logger.hpp"
+#include "kernel/shell/Commands.hpp"
+#include "fileSystem/FileSystem.hpp"
 #include <iostream>
 #include <algorithm>
-#include "../include/kernel/process/Scheduler.hpp"
-#include "../include/utils/StringUtils.hpp"
-#include "../include/kernel/process/ProcessManager.hpp"
+#include<cctype>
+#include "kernel/process/Scheduler.hpp"
+#include "utils/StringUtils.hpp"
+#include "kernel/process/ProcessManager.hpp"
 
 std::string toLower(std::string str) {
-    std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+    std::transform(str.begin(), str.end(), str.begin(), [](char c) {  return (std::tolower(static_cast<unsigned char>(c))); });
     return str;
 }
 
